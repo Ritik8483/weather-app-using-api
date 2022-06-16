@@ -114,9 +114,9 @@ body {
   font-weight: 600;
 }
 
-.temp-info-minmax,
+.temp_info_minmax,
 .weather-extra-info,
-.two-sided-section {
+.two_sided_section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
@@ -125,7 +125,7 @@ body {
   /* background-color: blanchedalmond; */
 }
 
-.widget .extra-temp .extra-info-leftside {
+.widget .extra-temp .extra_info_leftside {
   text-align: left;
   font-weight: 600;
   text-transform: capitalize;

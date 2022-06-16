@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../whether/Temperature.css'
+import styles from '../whether/Temperature.module.css'
 import WeatherCard from './WeatherCard';
 
 const Temperature = () => {
@@ -33,10 +33,10 @@ const Temperature = () => {
     
   return (
     <div>
-        <div className='wrap'>
-            <div className='search'>
-                <input type='search' name='search' value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} placeholder='search...' id='search' className='searchTerm' />
-                <button type='button' onClick={getWeatherInfo} className='searchButton' >search</button>
+        <div className={styles.wrap}>
+            <div className={styles.search}>
+                <input type='search' name='search' value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} placeholder='search...' id='search' className={styles.searchTerm} />
+                <button type='button' onClick={getWeatherInfo} className={styles.searchButton} >search</button>
             </div>
         </div>
         <WeatherCard tempInfo={tempInfo} />

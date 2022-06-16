@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styles from '../whether/Temperature.module.css'
 
 const WeatherCard = ({tempInfo}) => {
     console.log('T',tempInfo)
@@ -33,39 +34,39 @@ const WeatherCard = ({tempInfo}) => {
     let timeStr=`${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`
   return (
     <div>
-        <article className='widget'>
-            <div className='weatherIcon'>
-                <i className={`wi ${weatherState}`}></i>
+        <article className={styles.widget}>
+            <div className={styles.weatherIcon}>
+                <i className='wi wi-day-sunny'></i>
             </div>
-            <div className='weatherInfo'>
-                <div className='temperature'>
+            <div className={styles.weatherInfo}>
+                <div className={styles.temperature}>
                     <span>{temp}&deg;</span>
                 </div>
-                <div className='description'>
-                    <div className='weatherCondition'>{main}</div>
-                    <div className='place'>{name},{country}</div>
+                <div className={styles.description}>
+                    <div className={styles.weatherCondition}>{main}</div>
+                    <div className={styles.place}>{name},{country}</div>
                 </div>
             </div>
-            <div className='date'>{new Date().toLocaleString()}</div>
-            <div className='extra-temp'>
-                <div className='temp-info-minmax'>
-                    <div className='two-sided-section'>
+            <div className={styles.date}>{new Date().toLocaleString()}</div>
+            <div className={styles['extra-temp']}>
+                <div className={styles.temp_info_minmax}>
+                    <div className={styles.two_sided_section}>
                         <p><i className='wi wi-sunset'></i></p>    
-                        <p className='extra-info-leftside'>{timeStr} PM <br/>Sunset</p>                     
+                        <p className={styles.extra_info_leftside}>{timeStr} PM <br/>Sunset</p>                     
                     </div>
-                    <div className='two-sided-section'>
+                    <div className={styles.two_sided_section}>
                         <p><i className='wi wi-humidity'></i></p>    
-                        <p className='extra-info-leftside'>{humidity} <br/>Humidity</p>                     
+                        <p className={styles.extra_info_leftside}>{humidity} <br/>Humidity</p>                     
                     </div>
                 </div>
-                <div className='temp-info-minmax'>
-                    <div className='two-sided-section'>
+                <div className={styles.temp_info_minmax}>
+                    <div className={styles.two_sided_section}>
                         <p><i className='wi wi-rain'></i></p>    
-                        <p className='extra-info-leftside'>{pressure} <br/>Pressure</p>                     
+                        <p className={styles.extra_info_leftside}>{pressure} <br/>Pressure</p>                     
                     </div>
-                    <div className='two-sided-section'>
+                    <div className={styles.two_sided_section}>
                         <p><i className='wi wi-strong-wind'></i></p>    
-                        <p className='extra-info-leftside'>{speed}<br/>Speed</p>                     
+                        <p className={styles.extra_info_leftside}>{speed}<br/>Speed</p>                     
                     </div>
                 </div>
             </div>
