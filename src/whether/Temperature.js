@@ -33,11 +33,13 @@ const Temperature = () => {
     
   return (
     <div>
+        <div className={styles.container}>
         <div className={styles.wrap}>
             <div className={styles.search}>
                 <input type='search' name='search' value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} placeholder='search...' id='search' className={styles.searchTerm} />
                 <button type='button' onClick={getWeatherInfo} className={styles.searchButton} >search</button>
             </div>
+        </div>
         </div>
         <WeatherCard tempInfo={tempInfo} />
     </div>

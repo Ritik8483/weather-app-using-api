@@ -34,9 +34,10 @@ const WeatherCard = ({tempInfo}) => {
     let timeStr=`${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`
   return (
     <div>
+        <div className={styles.container}>
         <article className={styles.widget}>
             <div className={styles.weatherIcon}>
-                <i className='wi wi-day-sunny'></i>
+                <i className={`wi ${weatherState}`}></i>
             </div>
             <div className={styles.weatherInfo}>
                 <div className={styles.temperature}>
@@ -74,6 +75,7 @@ const WeatherCard = ({tempInfo}) => {
                 
             {/* </div> */}
         </article>
+        </div>
     </div>
   )
 }
